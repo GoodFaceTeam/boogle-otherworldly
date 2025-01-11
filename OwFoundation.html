@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OW Foundation Inc. Archives</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #000;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        .entry {
+            border-bottom: 1px dashed #ddd;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+        .entry:last-child {
+            border-bottom: none;
+        }
+        .entry h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .entry p {
+            margin: 0;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px 0;
+            background-color: #000;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .hidden {
+            display: none;
+        }
+
+        .container-search {
+            display: flex;
+            border: 3px solid #ff00ff;
+            padding: 5px;
+            background-color: #000;
+            box-shadow: 0 0 10px #ff00ff;
+            align-items: center;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            width: 100%;
+        }
+        .container-search input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 3px inset #fff; /* Внутренний эффект в стиле 90-х */
+            background-color: #ffcc00; /* Желтый фон */
+            color: #000;
+            pointer-events: none;
+        }
+        .buttons-s {
+            display: flex;
+            gap: 10px;
+        }
+        .container-search button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px outset #fff; /* Классический эффект выпуклости */
+            background-color: #ff00ff; /* Яркий цвет кнопок */
+            color: #000;
+            cursor: pointer;
+        }
+        .container-search button:disabled {
+            background-color: #808080; /* Серый для отключенных кнопок */
+            border: 2px solid #555;
+            cursor: not-allowed;
+        }
+        .container-search button:hover:not(:disabled) {
+            background-color: #00ff00; /* Зеленый при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-search">
+        <div class="buttons-s">
+            <button onclick="window.location.href='index.html'">Назад</button>
+            <button disabled>Вперед</button>
+            <button onclick="location.reload()">Обновить</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="http://owfoundation.com/" disabled>
+        </div>
+    </div>
+    <header>
+        <h1>OW Foundation Inc. Archives</h1>
+        <p>Catalog of Objects, Worlds, and Phenomena</p>
+    </header>
+    <nav>
+        <a onclick="showTab('home')">Home</a>
+        <a onclick="showTab('objects')">Objects</a>
+        <a onclick="showTab('worlds')">Worlds</a>
+        <a onclick="showTab('phenomena')">Phenomena</a>
+        <a onclick="showTab('contact')">Contact</a>
+    </nav>
+    <div class="container">
+        <div id="home" class="tab">
+            <p>Welcome to the OW Foundation Inc. Archives. Select a category to explore detailed records.</p>
+        </div>
+        <div id="objects" class="tab hidden">
+            <div class="entry">
+                <h2>Object #001 - The Rift Device</h2>
+                <p><strong>Description:</strong> A machine capable of opening portals to other dimensions. Found in Lab 15.</p>
+                <p><strong>Status:</strong> Inactive</p>
+            </div>
+        </div>
+        <div id="worlds" class="tab hidden">
+            <div class="entry">
+                <h2>World #57 - The Void Plains</h2>
+                <p><strong>Description:</strong> A desolate world with no atmosphere and faint purple light.</p>
+                <p><strong>Status:</strong> Unstable</p>
+            </div>
+        </div>
+        <div id="phenomena" class="tab hidden">
+            <div class="entry">
+                <h2>Phenomenon #12 - Temporal Echoes</h2>
+                <p><strong>Description:</strong> Repeated occurrences of events recorded in fractured dimensions.</p>
+                <p><strong>Status:</strong> Under Observation</p>
+            </div>
+        </div>
+        <div id="contact" class="tab hidden">
+            <p>Contact OW Foundation Inc. at info@owfoundation.example.com</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 OW Foundation Inc. All Rights Reserved.
+    </footer>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

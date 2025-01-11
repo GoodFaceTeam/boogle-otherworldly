@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Airwaves</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            background-color: #ff00ff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px #ff00ff;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 30px;
+            gap: 50px;
+        }
+        .description, .news {
+            width: 45%;
+            background-color: #222;
+            padding: 20px;
+            box-shadow: 0 0 10px #ff00ff;
+            border-radius: 10px;
+        }
+        .description h2, .news h2 {
+            text-align: center;
+            color: #ff00ff;
+        }
+        .description p, .news p {
+            line-height: 1.6;
+        }
+        .news-block {
+            background-color: #333;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ff00ff;
+        }
+        .news-block h3 {
+            margin: 0;
+            color: #ffcc00;
+        }
+        .player {
+            background-color: #ffcc00;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff00ff;
+            margin-top: 30px;
+        }
+        .player audio {
+            width: 100%;
+            height: 30px;
+            border: 2px outset #fff;
+            background-color: #000;
+            color: #fff;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: 2px outset #fff;
+            background-color: #ff00ff;
+            color: #000;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00ff00;
+        }
+        button:disabled {
+            background-color: #808080;
+            cursor: not-allowed;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1rem;
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+        }
+        .comments {
+            background-color: #222;
+            padding: 15px;
+            box-shadow: 0 0 10px #ff00ff;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .comment {
+            background-color: #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #ff00ff;
+        }
+        .comment h4 {
+            color: #ffcc00;
+            margin: 0;
+        }
+        .comment p {
+            color: #fff;
+        }
+
+        .container-search {
+            display: flex;
+            border: 3px solid #ff00ff;
+            padding: 5px;
+            background-color: #000;
+            box-shadow: 0 0 10px #ff00ff;
+            align-items: center;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            width: 100%;
+        }
+        .container-search input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 3px inset #fff; /* Внутренний эффект в стиле 90-х */
+            background-color: #ffcc00; /* Желтый фон */
+            color: #000;
+            pointer-events: none;
+        }
+        .buttons-s {
+            display: flex;
+            gap: 10px;
+        }
+        .container-search button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px outset #fff; /* Классический эффект выпуклости */
+            background-color: #ff00ff; /* Яркий цвет кнопок */
+            color: #000;
+            cursor: pointer;
+        }
+        .container-search button:disabled {
+            background-color: #808080; /* Серый для отключенных кнопок */
+            border: 2px solid #555;
+            cursor: not-allowed;
+        }
+        .container-search button:hover:not(:disabled) {
+            background-color: #00ff00; /* Зеленый при наведении */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-search">
+        <div class="buttons-s">
+            <button onclick="window.location.href='index.html'">Назад</button>
+            <button disabled>Вперед</button>
+            <button onclick="location.reload()">Обновить</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="http://BeyondTheAirwaves.radio/home.html" disabled>
+        </div>
+    </div>
+<header>
+    <h1>Beyond the Airwaves</h1>
+</header>
+
+<div class="container">
+    <!-- Описание радиостанции -->
+    <div class="description">
+        <h2>Welcome to Beyond the Airwaves</h2>
+        <p>Welcome to the ultimate destination for fans of mystery, conspiracy theories, and UFOs. At "Beyond the Airwaves," we explore the unexplained, dive into the unknown, and provide a voice to the mysteries of the world. Our broadcasts are dedicated to those who seek answers to questions that others might consider too strange or eerie. Whether it's talking about UFO sightings, government cover-ups, or cryptic phenomenon, you're sure to hear something that makes you question reality.</p>
+    </div>
+
+    <!-- Новостные блоки -->
+    <div class="news">
+        <h2>Latest News</h2>
+
+        <div class="news-block">
+            <h3>Unexplained Signal Received from Deep Space</h3>
+            <p>On January 5, 2025, a mysterious signal from an unknown source deep in space was detected. Experts are baffled by its origin and its implications. The signal was strong enough to suggest it could be an attempt at communication from an extraterrestrial civilization. Stay tuned for more updates!</p>
+        </div>
+
+        <div class="news-block">
+            <h3>Government Declassifies UFO Files</h3>
+            <p>In an unprecedented move, the government has released previously classified documents detailing multiple UFO encounters. While the release has raised more questions than answers, conspiracy theorists have already begun to dissect the information. Could this be the first step towards full disclosure?</p>
+        </div>
+    </div>
+</div>
+
+<!-- Плеер радио -->
+<div class="player">
+    <audio controls>
+        <source src="https://www.example.com/audio-stream" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<div class="buttons">
+    <button onclick="window.location.href='index.html'">Home</button>
+    <button disabled>Next</button>
+    <button onclick="location.reload()">Reload</button>
+</div>
+
+<!-- Комментарии слушателей -->
+<div class="comments">
+    <h2>Listener Comments</h2>
+
+    <div class="comment">
+        <h4>John D. (January 9, 2025)</h4>
+        <p>I've been listening to "Beyond the Airwaves" for months now, and I can't get enough of the bizarre stories. The signal from deep space? I'm convinced it's a message from someone... or something!</p>
+    </div>
+
+    <div class="comment">
+        <h4>Emily P. (January 8, 2025)</h4>
+        <p>Ever since I tuned in, I’ve been hooked. The UFO files are mind-blowing, and the discussions on government cover-ups just give me chills. Keep it up!</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Beyond the Airwaves. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
